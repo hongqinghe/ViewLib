@@ -1,4 +1,4 @@
-package com.person.gongtong.viewmodule;
+package person.middlem.viewmodule;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.person.gongtong.viewmodule.test", appContext.getPackageName());
+        assertEquals("person.middlem.viewmodule.test", appContext.getPackageName());
     }
 }

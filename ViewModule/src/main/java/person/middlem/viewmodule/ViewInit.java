@@ -1,4 +1,4 @@
-package com.person.gongtong.viewmodule;
+package person.middlem.viewmodule;
 
 /***********************************************
  * <P> desc:
@@ -8,4 +8,5 @@ package com.person.gongtong.viewmodule;
  ***********************************************/
 
 public class ViewInit {
+//    TextView
 }

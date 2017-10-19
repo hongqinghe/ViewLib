@@ -1,4 +1,4 @@
-package com.person.gongtong.viewmodule;
+package person.middlem.viewmodule;
 
 import org.junit.Test;
 
