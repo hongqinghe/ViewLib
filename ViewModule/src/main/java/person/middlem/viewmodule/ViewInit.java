@@ -1,5 +1,7 @@
 package person.middlem.viewmodule;
 
+import android.content.Context;
+
 /***********************************************
  * <P> desc:
  * <P> Author: gongtong
@@ -9,4 +11,6 @@ package person.middlem.viewmodule;
 
 public class ViewInit {
 //    TextView
+    public static Context  mContext;
+
 }

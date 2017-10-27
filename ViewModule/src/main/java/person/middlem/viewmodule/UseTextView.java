@@ -1,5 +1,8 @@
 package person.middlem.viewmodule;
 
+import android.view.View;
+import android.widget.TextView;
+
 /***********************************************
  * <P> desc:
  * <P> Author: hehongqing
@@ -8,4 +11,7 @@ package person.middlem.viewmodule;
  ***********************************************/
 
 public class UseTextView {
+    TextView textView =new TextView(ViewInit.mContext);
+
+
 }
