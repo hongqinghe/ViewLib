@@ -1,1 +1,4 @@
 include ':sample', ':ViewModule'
+
+include  ':UtilsModule'
+project (':UtilsModule').projectDir=new File('../UtilsLib/UtilsModule')

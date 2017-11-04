@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="white_80">#ccffffff</color>
+    <color name="white_50">#7fffffff</color>
+    <color name="white_30">#4cffffff</color>
+    <color name="white_333">#ff333333</color>
+    <color name="white_666">#ff666666</color>
+    <color name="white_999">#ff999999</color>
+    <color name="white_ccc">#ffcccccc</color>
+    <color name="white_f03">#ffff0033</color>
+    <color name="white_08f">#ff0088ff</color>
+    <color name="white_0c3">#ff00cc33</color>
+    <color name="white_f90">#ffff9900</color>
+</resources>
