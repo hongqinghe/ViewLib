@@ -36,10 +36,4 @@ public class StickHeadListView extends ListView {
     });
 
   }
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-
-        return super.dispatchTouchEvent(ev);
-    }
 }

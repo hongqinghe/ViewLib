@@ -21,7 +21,9 @@ public class ListViewActivity extends AppCompatActivity {
         listView =  findViewById(R.id.listView);
         testAdapter=new TestAdapter(this,getStringList());
         listView.setAdapter(testAdapter);
-
+        initEvent();
+    }
+    private void initEvent() {
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -35,13 +37,22 @@ public class ListViewActivity extends AppCompatActivity {
         });
     }
 
-    private List<String> getStringList() {
-        List<String> stringList = new ArrayList<>();
+    private List<StringData> getStringList() {
+        List<StringData> stringList = new ArrayList<>();
         for (int i=0;i<=16;i++){
-            if (i==2){
-                stringList.add("iiiiiiiiiiiiiiiii");
+            if (i==1||i==3||i==5){
+                StringData stringData=new StringData();
+                stringData.setType("1");
+                stringData.setTitle("title1");
+                stringData.setContent("content1");
+                stringList.add(stringData);
+            } else {
+                StringData stringData=new StringData();
+                stringData.setType("2");
+                stringData.setTitle("title2");
+                stringData.setContent("content2");
+                stringList.add(stringData);
             }
-            else stringList.add("sssss"+i);
         }
         return stringList;
     }

@@ -1,39 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
 	>
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="100dp"
-		android:text="otherView"
-		android:gravity="center"
-		android:textSize="@dimen/font_28"
-		android:background="@color/white_08f"/>
 	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="100dp"
+		android:layout_height="30dp"
 		android:text="textFilterUse"
 		style="@style/button_style"
 		android:layout_gravity="center"
 		android:textAllCaps="false"
 		android:onClick="toSearch"/>
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="50dp"
-		android:text="headView"
-		android:gravity="center"
-		android:visibility="gone"
-		android:background="@color/white_08f"
-		android:id="@+id/tv_header"/>
 	<person.middlem.viewmodule.listview.StickHeadListView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:textFilterEnabled="true"
-		android:listSelector="@color/white_50"
 		android:drawSelectorOnTop="true"
+		android:divider="@color/white_999"
 		android:id="@+id/listView"/>
 </LinearLayout>

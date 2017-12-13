@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        applicationId "middlem.person.app"
+        applicationId "middlem.person.viewlib"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
@@ -34,4 +34,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile project(':ViewModule')
+//    compile 'com.githang:status-bar-compat:latest.integration'
+    compile('com.jaeger.statusbarutil:library:1.4.0') {
+        exclude group: 'com.android.support'
+    }
 }

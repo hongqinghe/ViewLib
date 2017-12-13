@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="middlem.person.app.AutoViewActivity">
+<person.middlem.viewmodule.AutoWrapView
+	android:id="@+id/autoWrapView"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="5dp"
+		android:background="@color/colorPrimary"/>
+	<person.middlem.viewmodule.TitleTypeView
+		android:id="@+id/titleTypeView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+</LinearLayout>
