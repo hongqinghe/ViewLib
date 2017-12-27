@@ -4,16 +4,16 @@
 	android:layout_height="match_parent"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:orientation="vertical"
-	android:background="@color/white_ccc">
+	android:background="@color/white_999">
 	
-<person.middlem.viewmodule.AutoWrapView
-	android:id="@+id/autoWrapView"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	app:margin_left="5dp"
-	app:text_color="@color/white_08f"
-	app:text_num="2"
-	app:text_size="14"/>
+	<person.middlem.viewmodule.AutoWrapView
+		android:id="@+id/autoWrapView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:margin_left="5dp"
+		app:text_color="@color/white"
+		app:text_num="2"
+		app:text_size="14"/>
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:orientation="horizontal"
@@ -21,6 +21,7 @@
 		style="@style/item_type_column_style"
 		>
 		<TextView
+			android:id="@+id/textLeft"
 			android:layout_width="0dp"
 			android:layout_weight="1"
 			android:layout_height="wrap_content"
@@ -29,6 +30,7 @@
 			android:gravity="start"
 			android:text="供应商"/>
 		<TextView
+			android:id="@+id/textRight"
 			android:layout_weight="1"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"

@@ -16,7 +16,9 @@ public class StatusBarCompat {
 
     private static final int DEFAULT_STATUS_BAR_ALPHA = 80;
     static {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            mStatusBar = new StatusMBarImpl();
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             mStatusBar = new StatusLollipopBarImpl();
         } else if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
             mStatusBar=new StatusKitkatBarImpl();

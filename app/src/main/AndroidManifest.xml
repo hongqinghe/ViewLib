@@ -18,7 +18,8 @@
 			</intent-filter>
 		</activity>
 		<activity android:name=".AutoViewActivity" />
-		<activity android:name=".StatusBarActivity"/>
+		<activity android:name=".StatusBarActivity" />
+		<activity android:name=".StatusTestActivity"></activity>
 	</application>
 
 </manifest>

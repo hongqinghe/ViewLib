@@ -2,6 +2,7 @@ package middlem.person.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.jaeger.library.StatusBarUtil;
 
@@ -12,6 +13,8 @@ import person.middlem.viewmodule.AutoWrapView;
 import person.middlem.viewmodule.TitleTypeView;
 
 public class AutoViewActivity extends AppCompatActivity {
+
+    private TitleTypeView titleTypeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +34,14 @@ public class AutoViewActivity extends AppCompatActivity {
         autoWrap.setDataList(stringList);
 
 
-        TitleTypeView titleTypeView = findViewById(R.id.titleTypeView);
+        titleTypeView = findViewById(R.id.titleTypeView);
+    }
+
+    public void update(View view) {
         List<String> list=new ArrayList<>();
         list.add("配货方：全部");
         list.add("配货方：全部");
         list.add("配货方：全部");
-        list.add("配货方：全部");
-        titleTypeView.getAutoWrapView().setDataList(list);
+        titleTypeView.getAutoWrapView().updateList(list);
     }
 }

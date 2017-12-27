@@ -21,7 +21,7 @@ import person.middlem.viewmodule.R;
 
 class StatusKitkatBarImpl implements IStatusBar {
     private static final String STATUS_BAR_TAG="statusBar";
-    private static final int FAKE_STATUS_BAR_VIEW_ID = R.id.statusbar_fake_status_bar_view;
+    private static final int FAKE_STATUS_BAR_VIEW_ID = R.id.status_bar_fake_status_bar_view;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -30,7 +30,6 @@ class StatusKitkatBarImpl implements IStatusBar {
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         ViewGroup decorView = (ViewGroup)window.getDecorView();
         View fakeStatusBarView = decorView.findViewById(FAKE_STATUS_BAR_VIEW_ID);
-        StatusLollipopBarImpl.MIUISetStatusBarLightMode(activity,true);
         if (fakeStatusBarView != null) {
             if (fakeStatusBarView.getVisibility() == View.GONE) {
                 fakeStatusBarView.setVisibility(View.VISIBLE);

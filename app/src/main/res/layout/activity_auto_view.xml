@@ -5,19 +5,53 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
+	android:fitsSystemWindows="true"
 	tools:context="middlem.person.app.AutoViewActivity">
-<person.middlem.viewmodule.AutoWrapView
-	android:id="@+id/autoWrapView"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"/>
+	
+	<person.middlem.viewmodule.AutoWrapView
+		android:id="@+id/autoWrapView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
 	
 	<View
 		android:layout_width="match_parent"
 		android:layout_height="1dp"
 		android:layout_marginTop="5dp"
-		android:background="@color/colorPrimary"/>
+		android:background="@color/colorPrimary" />
+	
 	<person.middlem.viewmodule.TitleTypeView
 		android:id="@+id/titleTypeView"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"/>
+		android:layout_height="wrap_content"
+		app:auto_content_1="@string/app_name"
+		app:auto_content_2="@string/app_name"
+		app:auto_content_3="@string/app_name" />
+	
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="update" />
+	
+	<person.middlem.viewmodule.TDFDividerLineView
+		android:layout_marginTop="@dimen/font_15"
+		style="@style/item_divider_style_w" />
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		
+		<person.middlem.viewmodule.ToggleTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:textOn="ssssss"
+			tools:ignore="HardcodedText" />
+		
+		<person.middlem.viewmodule.ToggleTextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textOff="hello"
+			tools:ignore="HardcodedText" />
+	</LinearLayout>
 </LinearLayout>

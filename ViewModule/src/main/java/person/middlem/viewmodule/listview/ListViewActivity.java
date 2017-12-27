@@ -32,7 +32,7 @@ public class ListViewActivity extends AppCompatActivity {
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                System.out.println("count--------->"+listView.getMaxScrollAmount());
+//                System.out.println("count--------->"+listView.getMaxScrollAmount());
             }
         });
     }

@@ -17,6 +17,7 @@
 		android:layout_height="match_parent"
 		android:textFilterEnabled="true"
 		android:drawSelectorOnTop="true"
+		android:dividerHeight="2dp"
 		android:divider="@color/white_999"
 		android:id="@+id/listView"/>
 </LinearLayout>

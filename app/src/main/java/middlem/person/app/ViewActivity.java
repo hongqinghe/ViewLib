@@ -35,4 +35,9 @@ public class ViewActivity extends AppCompatActivity {
         Intent intent=new Intent(this,StatusBarActivity.class);
         startActivity(intent);
     }
+
+    public void statusTestActivity(View view) {
+        Intent intent=new Intent(this,StatusTestActivity.class);
+        startActivity(intent);
+    }
 }
