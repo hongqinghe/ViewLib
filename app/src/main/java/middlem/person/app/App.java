@@ -2,6 +2,7 @@ package middlem.person.app;
 
 import android.app.Application;
 import android.util.Log;
+import android.view.WindowManager;
 
 import middlem.person.utilsmodule.LogUtils;
 
@@ -12,9 +13,16 @@ import middlem.person.utilsmodule.LogUtils;
  ***********************************************/
 
 public class App extends Application {
+    private static WindowManager.LayoutParams wmParams=new WindowManager.LayoutParams();
     @Override
     public void onCreate() {
         super.onCreate();
         LogUtils.setLogEnable(true);
+    }
+    public  static Application getInstance(){
+       return new App();
+    }
+    public  static WindowManager.LayoutParams getMywmParams(){
+        return wmParams;
     }
 }
