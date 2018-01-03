@@ -40,4 +40,9 @@ public class ViewActivity extends AppCompatActivity {
         Intent intent=new Intent(this,StatusTestActivity.class);
         startActivity(intent);
     }
+
+    public void textTabViewActivity(View view) {
+        Intent intent=new Intent(this,TextTabViewActivity.class);
+        startActivity(intent);
+    }
 }

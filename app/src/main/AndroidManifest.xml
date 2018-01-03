@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="middlem.person.app">
+	
 	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	
 	<application
 		android:name=".App"
 		android:allowBackup="true"
@@ -19,7 +21,8 @@
 		</activity>
 		<activity android:name=".AutoViewActivity" />
 		<activity android:name=".StatusBarActivity" />
-		<activity android:name=".StatusTestActivity"></activity>
+		<activity android:name=".StatusTestActivity" />
+		<activity android:name=".TextTabViewActivity"></activity>
 	</application>
 
 </manifest>

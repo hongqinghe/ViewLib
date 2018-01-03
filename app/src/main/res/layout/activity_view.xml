@@ -81,6 +81,21 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/button"
 		tools:ignore="HardcodedText" />
+	
+	<Button
+		android:id="@+id/textabView"
+		style="@style/button_style"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="148dp"
+		android:layout_marginStart="148dp"
+		android:layout_marginTop="268dp"
+		android:onClick="textTabViewActivity"
+		android:text="TextTabView"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/button"
+		tools:ignore="HardcodedText" />
 
 
 </android.support.constraint.ConstraintLayout>
