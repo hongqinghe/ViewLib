@@ -7,6 +7,7 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
+import middlem.person.utilsmodule.LogUtils;
 import person.middlem.viewmodule.TabDataVo;
 import person.middlem.viewmodule.TextTabView;
 
@@ -26,5 +27,11 @@ public class TextTabViewActivity extends FragmentActivity {
         tabDataVos.add(tabDataVo2);
         textTabView.setTabDatas(tabDataVos);
         textTabView.setTabSelect(0);
+        textTabView.setOnSelectListener(new TextTabView.OnTextTabSelectListener() {
+            @Override
+            public void onSelect(int position) {
+                LogUtils.d("TextTabView","选中的position"+position);
+            }
+        });
     }
 }

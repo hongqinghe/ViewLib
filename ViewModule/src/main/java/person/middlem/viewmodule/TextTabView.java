@@ -13,11 +13,13 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
 
 import middlem.person.utilsmodule.ConvertUtils;
+import middlem.person.utilsmodule.LogUtils;
 import middlem.person.utilsmodule.SystemUtils;
 
 /***********************************************
@@ -27,6 +29,7 @@ import middlem.person.utilsmodule.SystemUtils;
  ***********************************************/
 
 public class TextTabView extends FrameLayout {
+    private static final String TAB_VIEW_TAG = "textTabView";
     /**
      * 文本 选中未选中
      */
@@ -35,14 +38,6 @@ public class TextTabView extends FrameLayout {
     private int textUnSelectColor;
     private int textSelectColor;
 
-    /**
-     * 分割线的颜色(每个tab之间)
-     */
-    private int dividerColor;
-    private float dividerWidth;
-    private float dividerPadding;
-    private boolean isShowDivider;
-    private static final int DEFAUTLT_DIVIDER_COLOR = Color.WHITE;
     /**
      * 指示器
      */
@@ -95,13 +90,11 @@ public class TextTabView extends FrameLayout {
     private void readStyleParameters(Context context, AttributeSet attrs, int defStyleAttr) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextTabView);
         if (typedArray != null) {
-            dividerColor = typedArray.getColor(R.styleable.TextTabView_divider_color, DEFAUTLT_DIVIDER_COLOR);
-            dividerWidth = typedArray.getDimension(R.styleable.TextTabView_divider_width, ConvertUtils.dip2px(context, 12));
-            dividerPadding = typedArray.getDimension(R.styleable.TextTabView_divider_padding, ConvertUtils.dip2px(context, 5));
 
             indicatorColor = typedArray.getColor(R.styleable.TextTabView_indicator_color, DEFAULT_INDICATOR_COLOR);
-            indicatorWidth = typedArray.getDimension(R.styleable.TextTabView_indicator_width, ConvertUtils.dip2px(context, 5));
+//            indicatorWidth = typedArray.getDimension(R.styleable.TextTabView_indicator_width, ConvertUtils.dip2px(context, 5));
             indicatorHeight = typedArray.getDimension(R.styleable.TextTabView_indicator_height, ConvertUtils.dip2px(context, 4));
+            isShowIndicator = typedArray.getBoolean(R.styleable.TextTabView_indicator_show_line, true);
 
             textSelectSize = typedArray.getInt(R.styleable.TextTabView_text_select_size, 15);
             textUnSelectSize = typedArray.getInt(R.styleable.TextTabView_text_unselect_szie, 15);
@@ -131,20 +124,25 @@ public class TextTabView extends FrameLayout {
 
     private void updateTabSelection(int position) {
         mCurrectPotion = position;
-        if (tabDataVos != null&&tabDataVos.size()>0) {
+        LogUtils.d(TAB_VIEW_TAG, "update tab view");
+        if (tabDataVos != null && tabDataVos.size() > 0) {
             int count = tabDataVos.size();
             for (int i = 0; i < count; i++) {
                 View selectView = mViewContainer.getChildAt(i);
                 boolean isSelect = i == position;
                 TextView tabText = selectView.findViewById(R.id.tab_text);
                 ImageView tabIcon = selectView.findViewById(R.id.tab_icon);
-                View tabLine=selectView.findViewById(R.id.tab_line);
-                tabText.setTextSize(isSelect?textSelectSize:textUnSelectSize);
-                tabText.setTextColor(isSelect?textSelectColor: textUnSelectColor);
-                tabLine.setVisibility(isSelect?VISIBLE:INVISIBLE);
-                if (showTabIcon){
+                View tabLine = selectView.findViewById(R.id.tab_line);
+                RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, ConvertUtils.dip2px(mContext, indicatorHeight));
+                layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+                tabLine.setLayoutParams(layoutParams);
+                tabLine.setBackgroundColor(indicatorColor);
+                tabText.setTextSize(isSelect ? textSelectSize : textUnSelectSize);
+                tabText.setTextColor(isSelect ? textSelectColor : textUnSelectColor);
+                tabLine.setVisibility(isSelect ? VISIBLE : INVISIBLE);
+                if (showTabIcon) {
                     tabIcon.setVisibility(VISIBLE);
-                    tabIcon.setImageResource(isSelect?tabDataVos.get(position).getTabSelectIcon():tabDataVos.get(position).getTabUnSelectIcon());
+                    tabIcon.setImageResource(isSelect ? tabDataVos.get(position).getTabSelectIcon() : tabDataVos.get(position).getTabUnSelectIcon());
                 }
             }
         }
@@ -177,17 +175,18 @@ public class TextTabView extends FrameLayout {
             @Override
             public void onClick(View v) {
                 int position = (int) v.getTag();
-                    if (mCurrectPotion!=position)
+                if (mCurrectPotion != position)
                     updateTabSelection(position);
-                    if (selectListener != null) {
-                        selectListener.onSelect(position);
-                    }
+                if (selectListener != null) {
+                    LogUtils.d(TAB_VIEW_TAG, "click:" + position);
+                    selectListener.onSelect(position);
+                }
             }
         });
         /**
          * 每个自View占用的布局
          */
-       LinearLayout.LayoutParams childLayoutParams= new LinearLayout.LayoutParams(SystemUtils.getScreenWidth(mContext)/tabDataVos.size(), LayoutParams.MATCH_PARENT, 1.0f);
+        LinearLayout.LayoutParams childLayoutParams = new LinearLayout.LayoutParams(SystemUtils.getScreenWidth(mContext) / tabDataVos.size(), LayoutParams.MATCH_PARENT, 1.0f);
         LayoutParams layoutParams = new LayoutParams(childLayoutParams);
         mViewContainer.addView(tabView, position, layoutParams);
 
@@ -202,7 +201,7 @@ public class TextTabView extends FrameLayout {
         this.selectListener = onSelectListener;
     }
 
-    private interface OnTextTabSelectListener {
+    public interface OnTextTabSelectListener {
         void onSelect(int position);
     }
 }
