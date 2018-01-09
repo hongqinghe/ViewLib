@@ -3,6 +3,7 @@ package middlem.person.app;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,5 +34,9 @@ public class TextTabViewActivity extends FragmentActivity {
                 LogUtils.d("TextTabView","选中的position"+position);
             }
         });
+
+        TextView text=findViewById(R.id.text);
+//        text.setRotation(-45);
+////        text.setRotationY(45);
     }
 }

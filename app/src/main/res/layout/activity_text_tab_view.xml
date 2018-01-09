@@ -15,4 +15,16 @@
 	app:indicator_color="@color/white_f03"
 	app:indicator_height="2dp"
 	android:background="@color/white_ccc"/>
+	
+	<TextView
+		android:id="@+id/text"
+		android:layout_marginTop="30dp"
+		android:layout_width="100dp"
+		android:layout_height="20dp"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:rotation="-45"
+		android:textColor="@color/white_08f"
+		android:background="@drawable/bg_btn_empty_red_r3"
+		android:text="hello"/>
 </LinearLayout>
