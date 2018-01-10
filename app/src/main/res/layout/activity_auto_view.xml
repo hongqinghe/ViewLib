@@ -61,4 +61,11 @@
 		android:layout_height="40dp"
 		android:visibility="gone"
 		android:src="@mipmap/ic_launcher"/>
+	<person.middlem.viewmodule.TDFHelpViewNew
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_gravity="bottom"
+		android:layout_marginBottom="20dp"
+		android:layout_marginLeft="20dp"
+		android:src="@mipmap/ic_launcher"/>
 </FrameLayout>
