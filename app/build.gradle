@@ -4,6 +4,9 @@ android {
     compileSdkVersion 26
 
 
+    lintOptions {
+        abortOnError false
+    }
 
     defaultConfig {
         applicationId "middlem.person.viewlib"
