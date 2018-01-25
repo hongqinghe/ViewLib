@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import person.middlem.viewmodule.AutoWrapView;
+import person.middlem.viewmodule.listview.ExpandableActivity;
 import person.middlem.viewmodule.recycleview.RecyCleViewActivity;
 import person.middlem.viewmodule.listview.ListViewActivity;
 
@@ -43,6 +43,11 @@ public class ViewActivity extends AppCompatActivity {
 
     public void textTabViewActivity(View view) {
         Intent intent=new Intent(this,TextTabViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void expandableActivity(View view) {
+        Intent intent=new Intent(this,ExpandableActivity.class);
         startActivity(intent);
     }
 }

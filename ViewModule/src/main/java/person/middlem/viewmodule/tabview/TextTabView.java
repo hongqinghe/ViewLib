@@ -1,4 +1,4 @@
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.tabview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,7 +9,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,6 +20,7 @@ import java.util.List;
 import middlem.person.utilsmodule.ConvertUtils;
 import middlem.person.utilsmodule.LogUtils;
 import middlem.person.utilsmodule.SystemUtils;
+import person.middlem.viewmodule.R;
 
 /***********************************************
  * <P> desc:  实现一个可以切换的tabView

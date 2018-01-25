@@ -1,4 +1,4 @@
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.titleview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import person.middlem.viewmodule.R;
 
 /***********************************************
  * <P> desc:   头部类型view:头部状态view由{@link AutoWrapView} 组成

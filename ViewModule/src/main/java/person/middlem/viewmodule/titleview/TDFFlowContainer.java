@@ -22,7 +22,7 @@
  * 最新版本：		$LastChangedRevision$
  **/
 
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.titleview;
 
 import android.content.Context;
 import android.util.AttributeSet;

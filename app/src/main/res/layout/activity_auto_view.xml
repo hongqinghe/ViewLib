@@ -9,7 +9,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical">
-	<person.middlem.viewmodule.AutoWrapView
+	<person.middlem.viewmodule.titleview.AutoWrapView
 		android:id="@+id/autoWrapView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content" />
@@ -20,7 +20,7 @@
 		android:layout_marginTop="5dp"
 		android:background="@color/colorPrimary" />
 	
-	<person.middlem.viewmodule.TitleTypeView
+	<person.middlem.viewmodule.titleview.TitleTypeView
 		android:id="@+id/titleTypeView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -42,26 +42,26 @@
 		android:layout_height="wrap_content"
 		android:orientation="horizontal">
 		
-		<person.middlem.viewmodule.ToggleTextView
+		<person.middlem.viewmodule.tabview.ToggleTextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:background="@color/white"
 			android:textOn="ssssss"
 			tools:ignore="HardcodedText" />
 		
-		<person.middlem.viewmodule.ToggleTextView
+		<person.middlem.viewmodule.tabview.ToggleTextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textOff="hello"
 			tools:ignore="HardcodedText" />
 	</LinearLayout>
 	</LinearLayout>
-	<person.middlem.viewmodule.TDFHelpView
+	<person.middlem.viewmodule.helpview.TDFHelpView
 		android:layout_width="40dp"
 		android:layout_height="40dp"
 		android:visibility="gone"
 		android:src="@mipmap/ic_launcher"/>
-	<person.middlem.viewmodule.TDFHelpViewNew
+	<person.middlem.viewmodule.helpview.TDFHelpViewNew
 		android:layout_width="40dp"
 		android:layout_height="40dp"
 		android:layout_gravity="bottom"

@@ -1,6 +1,5 @@
 package middlem.person.app;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,8 +12,8 @@ import com.jaeger.library.StatusBarUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import person.middlem.viewmodule.AutoWrapView;
-import person.middlem.viewmodule.TitleTypeView;
+import person.middlem.viewmodule.titleview.AutoWrapView;
+import person.middlem.viewmodule.titleview.TitleTypeView;
 
 public class AutoViewActivity extends AppCompatActivity {
 

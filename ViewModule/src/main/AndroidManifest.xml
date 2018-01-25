@@ -6,9 +6,10 @@
 		android:allowBackup="true"
 		android:label="@string/app_name"
 		android:supportsRtl="true">
-		<activity android:name=".TextViewActivity"/>
+		<activity android:name=".TextViewActivity" />
 		<activity android:name=".listview.ListViewActivity" />
-		<activity android:name=".recycleview.RecyCleViewActivity"/>
+		<activity android:name=".recycleview.RecyCleViewActivity" />
+		<activity android:name=".listview.ExpandableActivity"></activity>
 	</application>
 
 </manifest>

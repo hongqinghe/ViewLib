@@ -1,4 +1,4 @@
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.tabview;
 
 import android.support.annotation.Nullable;
 

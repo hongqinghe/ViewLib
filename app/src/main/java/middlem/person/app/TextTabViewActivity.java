@@ -1,7 +1,6 @@
 package middlem.person.app;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -9,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import middlem.person.utilsmodule.LogUtils;
-import person.middlem.viewmodule.TabDataVo;
-import person.middlem.viewmodule.TextTabView;
+import person.middlem.viewmodule.tabview.TabDataVo;
+import person.middlem.viewmodule.tabview.TextTabView;
 
 public class TextTabViewActivity extends FragmentActivity {
 

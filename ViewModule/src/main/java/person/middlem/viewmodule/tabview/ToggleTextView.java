@@ -1,10 +1,12 @@
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.tabview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.CompoundButton;
+
+import person.middlem.viewmodule.R;
 
 /**
  * 可选中textView  选中后切换颜色

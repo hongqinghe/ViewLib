@@ -1,5 +1,6 @@
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.helpview;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
@@ -7,6 +8,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.OvershootInterpolator;
+import android.view.animation.TranslateAnimation;
+
 import middlem.person.utilsmodule.ConvertUtils;
 
 /***********************************************
@@ -15,7 +21,7 @@ import middlem.person.utilsmodule.ConvertUtils;
  * <P> Date: 2017/10/27 15:47
  * <P> Copyright  2008 二维火科技
  ***********************************************/
-public class TDFHelpView extends AppCompatImageView implements View.OnTouchListener {
+public class TDFHelpViewNew extends AppCompatImageView implements View.OnTouchListener {
     private View viewGroup;
     private int lastX;
     private int lastY;
@@ -26,14 +32,14 @@ public class TDFHelpView extends AppCompatImageView implements View.OnTouchListe
     private int moveX;
     private int moveY;
 
-    public TDFHelpView(Context context) {
+    public TDFHelpViewNew(Context context) {
         this(context, null);
     }
 
-    public TDFHelpView(Context context, AttributeSet attrs) {
+    public TDFHelpViewNew(Context context, AttributeSet attrs) {
         super(context, attrs);
         setClickable(true);
-        padding = ConvertUtils.dip2px(context, 5);
+        padding = ConvertUtils.dip2px(context, 10);
     }
 
     @Override
@@ -47,7 +53,7 @@ public class TDFHelpView extends AppCompatImageView implements View.OnTouchListe
     }
 
     @Override
-    public boolean onTouch(View v, MotionEvent event) {
+    public boolean onTouch(final View v, MotionEvent event) {
         if (viewGroup == null) {
             viewGroup = this;
             if (viewGroup == null)
@@ -100,6 +106,7 @@ public class TDFHelpView extends AppCompatImageView implements View.OnTouchListe
                     bottom = rootHeight;
                     top = bottom - viewGroup.getHeight();
                 }
+
                 viewGroup.layout(left, top, right, bottom);
                 lastX = (int) event.getRawX();
                 lastY = (int) event.getRawY();
@@ -111,67 +118,51 @@ public class TDFHelpView extends AppCompatImageView implements View.OnTouchListe
                     return false;
                 }
                 isDrag = true;
-                int left = viewGroup.getLeft();
-                int top = viewGroup.getTop();
-                int right = viewGroup.getRight();
-                int bottom = viewGroup.getBottom();
-
-                int centerX = left + viewGroup.getWidth() / 2;
-                int centerY = top + viewGroup.getHeight() / 2;
-
-                if (centerX < rootWidth / 2) {
-                    if (centerY < rootHeight / 2) {
-                        if (centerX < centerY) {
-                            left = padding;
-                            right = left + viewGroup.getWidth();
-                        } else {
-                            top = padding;
-                            bottom = top + viewGroup.getHeight();
-                        }
-                    } else {
-                        int bottomHeight = rootHeight - centerY;
-                        if (centerX < bottomHeight) {
-                            left = padding;
-                            right = left + viewGroup.getWidth();
-                        } else {
-                            bottom = rootHeight - padding;
-                            top = bottom - viewGroup.getHeight();
-                        }
+               final int left = padding;
+               final int right = viewGroup.getWidth()+padding;
+               final int bottom = viewGroup.getBottom();
+               final int top = viewGroup.getTop();
+                ValueAnimator animation=ValueAnimator.ofInt(right,left);
+                animation.setDuration(300);
+                animation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        int animatedValue = (int) animation.getAnimatedValue();
+                        viewGroup.clearAnimation();
+//                        viewGroup.setAnimation();
+                        viewGroup.layout(left, top, right, bottom);
                     }
-                } else {
-                    int distanceRight = rootWidth - centerX;
-                    if (centerY<rootHeight/2-100)
-                    if (centerY < rootHeight / 2) {
-                        if (distanceRight < centerY) {
-                            right = rootWidth - padding;
-                            left = right - viewGroup.getWidth();
-                        } else {
-                            top = padding;
-                            bottom = top + viewGroup.getHeight();
-                        }
-                    } else {
-                        int bottomHeight = rootHeight - centerY;
-                        if (distanceRight < bottomHeight) {
-                            right = rootWidth - padding;
-                            left = right - viewGroup.getWidth();
-                        } else {
-                            bottom = rootHeight - padding;
-                            top = bottom - viewGroup.getHeight();
-                        }
-                    }
-                }
-                //  Log.d("layout-position",left+"--"+top+"---"+right+"---"+bottom);
+                });
+                AnimationSet animationSet=new AnimationSet(true);
+//                animationSet.addAnimation(animation);
+                viewGroup.startAnimation(new AnimationSet(true));
+//                animation.start();
+                TranslateAnimation translateAnimation=new TranslateAnimation(Animation.RELATIVE_TO_PARENT,0,Animation.RELATIVE_TO_PARENT,-(event.getRawX()-right-padding)/(rootWidth-padding),Animation.RELATIVE_TO_PARENT,0,Animation.RELATIVE_TO_PARENT,0);
+//                translateAnimation.setInterpolator(new OvershootInterpolator());
+                translateAnimation.setDuration(300);
+                translateAnimation.setFillAfter(true);
+                translateAnimation.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
 
-//                if (right>=rootWidth-viewGroup.getWidth()*2-padding*2&&bottom>=rootHeight/2-viewGroup.getHeight()&&bottom<=rootHeight/2+padding){
-//                    bottom-=200;
-//                    top-=200;
-//                }
-//
-//                if (right>=rootWidth-viewGroup.getWidth()*2-padding*2&&bottom>=rootHeight/2-viewGroup.getHeight()*3&&bottom<=rootHeight/2+padding+viewGroup.getHeight()*2){
-//                    bottom-=200;
-//                    top-=200;
-//                }
-                viewGroup.layout(left, top, right, bottom);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        viewGroup.clearAnimation();
+                        viewGroup.layout(left, top, right, bottom);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                viewGroup.startAnimation(translateAnimation);
+
+//                viewGroup.layout(left, top, right, bottom);
+//                Animation animation1=new ValueAnimator();
+
                 break;
             }
             case MotionEvent.ACTION_CANCEL: {

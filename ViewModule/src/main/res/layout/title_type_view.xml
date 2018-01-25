@@ -6,7 +6,7 @@
 	android:orientation="vertical"
 	android:background="@color/white_999">
 	
-	<person.middlem.viewmodule.AutoWrapView
+	<person.middlem.viewmodule.titleview.AutoWrapView
 		android:id="@+id/autoWrapView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"

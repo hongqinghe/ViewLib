@@ -96,6 +96,21 @@
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/button"
 		tools:ignore="HardcodedText" />
+	
+	<Button
+		android:id="@+id/expandable"
+		style="@style/button_style"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="148dp"
+		android:layout_marginStart="152dp"
+		android:layout_marginTop="324dp"
+		android:onClick="expandableActivity"
+		android:text="ExpandableActivity"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/button"
+		tools:ignore="HardcodedText" />
 
 
 </android.support.constraint.ConstraintLayout>

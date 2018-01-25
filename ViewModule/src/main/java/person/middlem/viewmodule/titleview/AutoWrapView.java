@@ -1,4 +1,4 @@
-package person.middlem.viewmodule;
+package person.middlem.viewmodule.titleview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,6 +16,7 @@ import java.util.List;
 
 import middlem.person.utilsmodule.ConvertUtils;
 import middlem.person.utilsmodule.DisplayMetricsUtil;
+import person.middlem.viewmodule.R;
 
 /***********************************************
  * <P> desc:   一个自动换行的头部TextView（可以自动设置一行显示的数量（默认设置两个））
