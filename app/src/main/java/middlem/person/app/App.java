@@ -1,10 +1,13 @@
 package middlem.person.app;
 
+import android.app.Activity;
 import android.app.Application;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.WindowManager;
 
-import middlem.person.utilsmodule.LogUtils;
+import middlem.person.utilsmodule.comutils.LogUtils;
+import person.middlem.viewmodule.system.AppLifecycleManager;
+
 
 /***********************************************
  * <P> desc:
@@ -18,6 +21,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         LogUtils.setLogEnable(true);
+        registerActivityLifecycleCallbacks(new AppLifecycleManager());
     }
     public  static Application getInstance(){
        return new App();

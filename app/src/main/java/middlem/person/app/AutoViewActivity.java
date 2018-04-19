@@ -22,7 +22,6 @@ public class AutoViewActivity extends AppCompatActivity {
     WindowManager wm = null;
     WindowManager.LayoutParams wmParams = null;
     MyFloatView myFV = null;
-    private TDFCustomerView tdfCustomerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +44,6 @@ public class AutoViewActivity extends AppCompatActivity {
         titleTypeView = findViewById(R.id.titleTypeView);
 
         createView();
-        tdfCustomerView = new TDFCustomerView(this);
-        tdfCustomerView.show();
-        tdfCustomerView.setLocation(TDFCustomerView.LOCATION_LEFT_BOTTOM);
     }
 
     public void update(View view) {
@@ -61,7 +57,6 @@ public class AutoViewActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        tdfCustomerView.dismiss();
     }
 
     private void createView() {

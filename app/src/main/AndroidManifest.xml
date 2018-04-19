@@ -22,7 +22,7 @@
 		<activity android:name=".AutoViewActivity" />
 		<activity android:name=".StatusBarActivity" />
 		<activity android:name=".StatusTestActivity" />
-		<activity android:name=".TextTabViewActivity"></activity>
+		<activity android:name=".TextTabViewActivity"/>
 	</application>
 
 </manifest>

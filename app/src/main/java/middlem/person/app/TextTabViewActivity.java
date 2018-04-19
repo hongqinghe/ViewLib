@@ -7,7 +7,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import middlem.person.utilsmodule.LogUtils;
+import middlem.person.utilsmodule.comutils.LogUtils;
 import person.middlem.viewmodule.tabview.TabDataVo;
 import person.middlem.viewmodule.tabview.TextTabView;
 
