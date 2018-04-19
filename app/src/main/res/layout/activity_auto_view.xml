@@ -33,7 +33,7 @@
 		android:layout_height="wrap_content"
 		android:onClick="update" />
 	
-	<person.middlem.viewmodule.TDFDividerLineView
+	<View
 		android:layout_marginTop="@dimen/font_15"
 		style="@style/item_divider_style_w" />
 	
@@ -68,4 +68,27 @@
 		android:layout_marginBottom="20dp"
 		android:layout_marginLeft="20dp"
 		android:src="@mipmap/ic_launcher"/>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical">
+		<TextView
+			android:id="@+id/second"
+			android:autoSizeTextType="uniform"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/font_17"
+			android:text="sssssssssssssssssssssssssssssss"
+			/>
+		<TextView
+			android:id="@+id/aa"
+			android:layout_width="50dp"
+			android:layout_height="wrap_content"
+			android:text="AAA"
+			android:visibility="gone"
+			android:textColor="@color/white_0c3"
+			android:textSize="@dimen/font_17"
+			/>
+		
+	</RelativeLayout>
 </FrameLayout>

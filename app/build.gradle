@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "middlem.person.viewlib"
-        minSdkVersion 19
+        minSdkVersion 26
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"

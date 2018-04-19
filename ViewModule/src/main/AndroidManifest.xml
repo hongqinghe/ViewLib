@@ -9,7 +9,8 @@
 		<activity android:name=".TextViewActivity" />
 		<activity android:name=".listview.ListViewActivity" />
 		<activity android:name=".recycleview.RecyCleViewActivity" />
-		<activity android:name=".listview.ExpandableActivity"></activity>
+		<activity android:name=".listview.ExpandableActivity" />
+		<activity android:name=".uselayout.ConstrainLayoutActivity"></activity>
 	</application>
 
 </manifest>

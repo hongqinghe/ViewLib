@@ -8,6 +8,7 @@ import android.view.View;
 import person.middlem.viewmodule.listview.ExpandableActivity;
 import person.middlem.viewmodule.recycleview.RecyCleViewActivity;
 import person.middlem.viewmodule.listview.ListViewActivity;
+import person.middlem.viewmodule.uselayout.ConstrainLayoutActivity;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -48,6 +49,11 @@ public class ViewActivity extends AppCompatActivity {
 
     public void expandableActivity(View view) {
         Intent intent=new Intent(this,ExpandableActivity.class);
+        startActivity(intent);
+    }
+
+    public void toContrainLayout(View view) {
+        Intent intent=new Intent(this,ConstrainLayoutActivity.class);
         startActivity(intent);
     }
 }

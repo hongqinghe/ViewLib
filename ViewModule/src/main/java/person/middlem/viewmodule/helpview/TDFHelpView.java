@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-import middlem.person.utilsmodule.ConvertUtils;
+import middlem.person.utilsmodule.comutils.ConvertUtils;
 
 /***********************************************
  * <P> desc:

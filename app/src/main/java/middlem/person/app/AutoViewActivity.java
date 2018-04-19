@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AutoCompleteTextView;
 
 import com.jaeger.library.StatusBarUtil;
 

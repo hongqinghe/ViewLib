@@ -14,8 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import middlem.person.utilsmodule.ConvertUtils;
-import middlem.person.utilsmodule.DisplayMetricsUtil;
+import middlem.person.utilsmodule.comutils.ConvertUtils;
+import middlem.person.utilsmodule.comutils.DisplayMetricsUtil;
 import person.middlem.viewmodule.R;
 
 /***********************************************

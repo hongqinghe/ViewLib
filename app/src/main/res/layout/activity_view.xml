@@ -9,18 +9,29 @@
 	
 	
 	<Button
+		android:id="@+id/to_contrainLayout"
+		style="@style/button_style"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="26dp"
+		android:onClick="toContrainLayout"
+		android:text="toConstrainlayout"
+		app:layout_constraintEnd_toStartOf="@+id/textabView"
+		app:layout_constraintStart_toEndOf="@+id/ViewAuto"
+		app:layout_constraintTop_toBottomOf="@+id/buttonRecycleView"
+		tools:ignore="HardcodedText" />
+	
+	<Button
 		android:id="@+id/button"
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="86dp"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="148dp"
-		android:layout_marginTop="36dp"
+		android:layout_marginEnd="2dp"
+		android:layout_marginStart="6dp"
+		android:layout_marginTop="28dp"
 		android:onClick="toListView"
 		android:text="listView"
-		app:layout_constraintBottom_toTopOf="@+id/autoWrapView"
-		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/buttonRecycleView"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent" />
 	
@@ -29,42 +40,39 @@
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="148dp"
-		android:layout_marginTop="8dp"
+		android:layout_marginTop="28dp"
 		android:onClick="toRecycleView"
 		android:text="RecycleView"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button" />
+		app:layout_constraintEnd_toStartOf="@+id/StatusBarSet"
+		app:layout_constraintStart_toEndOf="@+id/button"
+		app:layout_constraintTop_toTopOf="parent" />
 	
 	<Button
 		android:id="@+id/ViewAuto"
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="148dp"
-		android:layout_marginTop="144dp"
+		android:layout_marginEnd="17dp"
+		android:layout_marginStart="21dp"
 		android:onClick="viewAuto"
 		android:text="viewAuto"
-		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintBaseline_toBaselineOf="@+id/to_contrainLayout"
+		app:layout_constraintEnd_toStartOf="@+id/to_contrainLayout"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button"
 		tools:ignore="HardcodedText" />
-<Button
+	
+	<Button
 		android:id="@+id/StatusBarSet"
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="148dp"
-		android:layout_marginTop="72dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginTop="28dp"
 		android:onClick="statusBar"
 		android:text="statusBar"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/buttonRecycleView"
+		app:layout_constraintTop_toTopOf="parent"
 		tools:ignore="HardcodedText" />
 	
 	<Button
@@ -72,14 +80,12 @@
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="148dp"
-		android:layout_marginTop="208dp"
+		android:layout_marginEnd="34dp"
+		android:layout_marginTop="29dp"
 		android:onClick="statusTestActivity"
 		android:text="statusTestActivity"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textabView"
 		tools:ignore="HardcodedText" />
 	
 	<Button
@@ -87,14 +93,12 @@
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="148dp"
-		android:layout_marginTop="268dp"
+		android:layout_marginEnd="4dp"
 		android:onClick="textTabViewActivity"
 		android:text="TextTabView"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button"
+		app:layout_constraintBaseline_toBaselineOf="@+id/to_contrainLayout"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@+id/to_contrainLayout"
 		tools:ignore="HardcodedText" />
 	
 	<Button
@@ -102,14 +106,12 @@
 		style="@style/button_style"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="148dp"
-		android:layout_marginStart="152dp"
-		android:layout_marginTop="324dp"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="29dp"
 		android:onClick="expandableActivity"
 		android:text="ExpandableActivity"
-		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/button"
+		app:layout_constraintTop_toBottomOf="@+id/ViewAuto"
 		tools:ignore="HardcodedText" />
 
 

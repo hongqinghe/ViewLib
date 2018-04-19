@@ -17,9 +17,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import middlem.person.utilsmodule.ConvertUtils;
-import middlem.person.utilsmodule.LogUtils;
-import middlem.person.utilsmodule.SystemUtils;
+import middlem.person.utilsmodule.comutils.ConvertUtils;
+import middlem.person.utilsmodule.comutils.LogUtils;
+import middlem.person.utilsmodule.comutils.SystemUtils;
 import person.middlem.viewmodule.R;
 
 /***********************************************
