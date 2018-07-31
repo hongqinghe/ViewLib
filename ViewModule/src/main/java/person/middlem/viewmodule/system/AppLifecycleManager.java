@@ -20,6 +20,7 @@ public class AppLifecycleManager implements Application.ActivityLifecycleCallbac
     @Override
     public void onActivityStarted(Activity activity) {
 
+
     }
 
     @Override

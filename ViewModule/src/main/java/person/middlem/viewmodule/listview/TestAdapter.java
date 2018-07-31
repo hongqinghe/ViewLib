@@ -54,12 +54,12 @@ public class TestAdapter extends BaseAdapter implements Filterable {
             switch (type) {
                 case 1:
                     convertView = LayoutInflater.from(mContext).inflate(R.layout.item_devider_view, null);
-                    TextView title1 = new ViewHolderUtils().get(convertView, R.id.title);
+                    TextView title1 = ViewHolderUtils.get(convertView, R.id.title);
                     title1.setText(stringList.get(position).getTitle());
                     break;
                 case 2:
                     convertView = LayoutInflater.from(mContext).inflate(R.layout.item_view, null);
-                    TextView view2 =new  ViewHolderUtils().get(convertView, R.id.content);
+                    TextView view2 = ViewHolderUtils.get(convertView, R.id.content);
                     view2.setText(stringList.get(position).getContent());
                     break;
             }
