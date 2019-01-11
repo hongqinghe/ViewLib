@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<person.middlem.viewmodule.focus.FocusRl xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".focus.FocusActivity">
+<person.middlem.viewmodule.focus.FocusLL
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <person.middlem.viewmodule.focus.ChildFocusView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true"
+        android:hint="焦点变化1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/white_08f"/>
+    <person.middlem.viewmodule.focus.ChildFocusView
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="焦点变化2"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="false"
+        android:layout_marginBottom="10dp"/>
+</person.middlem.viewmodule.focus.FocusLL>
+</person.middlem.viewmodule.focus.FocusRl>

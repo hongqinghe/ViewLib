@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import person.middlem.viewmodule.focus.FocusActivity;
 import person.middlem.viewmodule.listview.ExpandableActivity;
 import person.middlem.viewmodule.recycleview.RecyCleViewActivity;
 import person.middlem.viewmodule.listview.ListViewActivity;
@@ -54,6 +55,11 @@ public class ViewActivity extends AppCompatActivity {
 
     public void toContrainLayout(View view) {
         Intent intent=new Intent(this,ConstrainLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    public void focusAc(View view) {
+        Intent intent=new Intent(this,FocusActivity.class);
         startActivity(intent);
     }
 }
