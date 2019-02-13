@@ -62,4 +62,9 @@ public class ViewActivity extends AppCompatActivity {
         Intent intent=new Intent(this,FocusActivity.class);
         startActivity(intent);
     }
+
+    public void toMenu(View view) {
+        Intent intent=new Intent(this,MenuActivity.class);
+        startActivity(intent);
+    }
 }

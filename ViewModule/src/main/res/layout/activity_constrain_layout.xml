@@ -1,51 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	tools:context="person.middlem.viewmodule.uselayout.ConstrainLayoutActivity"
-	tools:layout_editor_absoluteY="81dp">
-	
-	<TextView
-		android:id="@+id/textView"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="TextViewsssssss"
-		app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-		tools:layout_editor_absoluteX="32dp"
-		tools:ignore="MissingConstraints" />
-	
-	<TextView
-		android:id="@+id/textView2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="TextView"
-		app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-		tools:layout_editor_absoluteX="187dp" />
-	
-	<TextView
-		android:id="@+id/textView3"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginEnd="8dp"
-		android:layout_marginRight="16dp"
-		android:layout_marginStart="32dp"
-		android:layout_marginTop="28dp"
-		android:text="TextView"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.45"
-		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintStart_toEndOf="@+id/textView2"
-		app:layout_constraintTop_toTopOf="parent" />
-	
-	<TextView
-		android:id="@+id/textView4"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="36dp"
-		android:layout_marginTop="24dp"
-		android:text="TextView"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/textView" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="person.middlem.viewmodule.uselayout.ConstrainLayoutActivity">
+    <!--基本属性设置约束  layout_constraintLeft_toLeftOf layout_constraintTop_toTopOf
+    layout_constraintBaseline_toBaselineOf layout_constraintRight_toRightOf-->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="111111111111"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="222222222"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--位置居中 parent 通过 layout_constraintHorizontal_bias 设置倾向权重 -->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3333333"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+    <!-- 约束之 layout_goneMarginLeft -->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="444444444444444"
+        app:layout_constraintLeft_toRightOf="@id/btn_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_3"
+        app:layout_goneMarginLeft="0dp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/white_08f"
+        android:gravity="center"
+        android:padding="2.5dp"
+        android:text="标签"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_4"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.constraint.Placeholder
+        android:id="@+id/ph_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/tv_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gl_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_4" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/tv_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_4" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:maxLines="1"
+        android:text="主标题主标题主标题主标题主标题主标题主标题主标题"
+        android:textSize="18sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_4"
+        app:layout_constraintWidth_max="200dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.50121653"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:maxLines="1"
+        android:text="完成完成完成完成"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_5"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toRightOf="@id/tv_5"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/view_split_1"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="@color/white_0c3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_5" />
+    <!--使用循环定位
+    layout_constraintCircle ：引用另一个小部件ID
+    layout_constraintCircleRadius ：到其他窗口小部件中心的距离
+    layout_constraintCircleAngle ：小部件应该处于哪个角度（以度为单位，从0到360）-->
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="位置1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_split_1" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="位置2"
+        app:layout_constraintCircle="@id/btn_2"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="50dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/white_0c3"
+        android:gravity="center"
+        android:text="位置"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_2" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="200dp"
+        android:background="@color/white_0c3"
+        android:gravity="center"
+        android:text="位置"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintLeft_toLeftOf="@id/btn_4"
+        app:layout_constraintTop_toBottomOf="@id/btn_2" />
+    <!-- chain 使用示例-->
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_5"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="chain_1"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_6"
+        app:layout_constraintTop_toBottomOf="@id/btn_4" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_6"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="chain_1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/btn_5"
+        app:layout_constraintRight_toLeftOf="@+id/btn_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_4" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_7"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="chain_1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/btn_6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_4"
+        app:layout_optimizationLevel="chains" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="777777777777777777777777777777"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/brr_2"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toRightOf="@id/iv_2"
+        app:layout_constraintRight_toLeftOf="@id/gl_1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_6"
+        app:layout_goneMarginStart="15dp" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_7"
+        app:layout_constraintTop_toBottomOf="@id/btn_7" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="888888888888"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_7" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="99999999"
+        app:layout_constraintLeft_toLeftOf="@id/iv_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_7"
+        app:layout_goneMarginStart="15dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="101010101010101010101010101010101010101010101010"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_9"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toRightOf="@id/gl_1"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <android.support.constraint.Barrier
+        android:id="@+id/brr_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tv_8,tv_7" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/brr_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tv_7,tv_9" />
+    <!--通过group 控制 组View的可见性，可进行一起标记-->
+    <android.support.constraint.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="btn_6,btn_7" />
+
+    <!--placeholder 使用  content 属性-->
+    <android.support.constraint.Placeholder
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:content="@id/iv_3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_10" />
+
+
+    <ImageView
+        android:id="@+id/iv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
 </android.support.constraint.ConstraintLayout>

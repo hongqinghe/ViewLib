@@ -13,4 +13,5 @@
     <color name="white_08f">#ff0088ff</color>
     <color name="white_0c3">#ff00cc33</color>
     <color name="white_f90">#ffff9900</color>
+    <color name="colorBackground">#FF4081</color>
 </resources>
