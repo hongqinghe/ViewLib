@@ -81,7 +81,7 @@ public class AutoViewActivity extends AppCompatActivity {
         wmParams.height = 40;
 
         //显示myFloatView图像
-        wm.addView(myFV, wmParams);
+//        wm.addView(myFV, wmParams);
 
     }
 
@@ -89,7 +89,7 @@ public class AutoViewActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         //在程序退出(Activity销毁）时销毁悬浮窗口
-        wm.removeView(myFV);
+//        wm.removeView(myFV);
     }
 
 
